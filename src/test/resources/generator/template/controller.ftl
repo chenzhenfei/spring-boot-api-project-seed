@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
+import io.swagger.annotations.Api;
 import javax.annotation.Resource;
 import java.util.List;
 
@@ -18,6 +18,7 @@ import java.util.List;
 */
 @RestController
 @RequestMapping("${baseRequestMapping}")
+@Api(tags="${modelNameUpperCamel}Controller",description = "${apiDescription}")
 public class ${modelNameUpperCamel}Controller {
     @Resource
     private ${modelNameUpperCamel}Service ${modelNameLowerCamel}Service;
